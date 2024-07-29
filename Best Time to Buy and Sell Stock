@@ -1,0 +1,14 @@
+class Solution {
+    public int maxProfit(int[] a) {
+        int n=a.length;
+        int min=a[0];
+        int maxprofit=0;
+        for(int i=0;i<n;i++){
+            if(a[i]<min)
+                min=a[i];
+            if(a[i]-min>maxprofit)
+            maxprofit=a[i]-min;
+        }
+        return maxprofit;
+    }
+}
